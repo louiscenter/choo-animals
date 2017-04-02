@@ -35,7 +35,7 @@ app.use(function (state, emitter) {
 
 // declare routes
 app.route('/', main)
-app.route('/filter/:type', filter)
+app.route('/filter/:type', main)
 
 // start!
 document.body.appendChild(app.start())

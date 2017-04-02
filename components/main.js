@@ -21,6 +21,13 @@ module.exports = function (state, emit) {
   }
 
   function showAnimals (obj, i) {
-    return animal(emit, obj, i)
+    var type = state.params.type
+    if (type) {
+      if (type === obj.type) {
+        return animal(emit, obj, i)
+      }
+    } else {
+      return animal(emit, obj, i)
+    }
   }
 }
