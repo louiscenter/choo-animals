@@ -4,7 +4,7 @@
   "description": "tutorial app for choo-handbook",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js:bundle.js -p 3000 -- -b bundle-collapser/plugin -g unassertify -g yo-yoify -g uglifyify"
+    "start": "budo index.js:bundle.js -p 3000 --no-debug -- -b bundle-collapser/plugin -g unassertify -g yo-yoify -g uglifyify"
   },
   "license": "MIT",
   "dependencies": {
