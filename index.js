@@ -1,5 +1,4 @@
 var choo = require('choo')
-var html = require('choo/html')
 
 var main = require('./components/main')
 var filter = require('./components/filter')
@@ -13,8 +12,6 @@ app.use(function (state, emitter) {
     { type: 'lion', x: 100, y: 200 },
     { type: 'crocodile', x: 300, y: 50 }
   ]
-
-  state.background = '#FFBFCA'
 
   // emitter handlers
   emitter.on('add', function () {

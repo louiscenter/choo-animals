@@ -6,7 +6,7 @@ module.exports = function (emit, animal, i) {
   var y = animal.y
 
   return html`
-    <img src="/assets/${ type }.gif" style="top: ${ x }px; left: ${ y }px;" data-id=${ i } onclick=${ remove }>
+    <img src="/assets/${type}.gif" style="top: ${x}px; left: ${y}px;" data-id=${i} onclick=${remove}>
   `
 
   function remove (e) {

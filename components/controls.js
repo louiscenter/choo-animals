@@ -3,9 +3,6 @@ var html = require('choo/html')
 module.exports = function (emit) {
   return html`
     <div class="controls">
-      <button onclick=${ add }>new animal</button>
-
-      <label>filters</label>
       <ul class="filters">
         <li><a href="/">all</a></li>
         <li><a href="/filter/crocodile">crododiles</a></li>
@@ -16,8 +13,4 @@ module.exports = function (emit) {
       </ul>
     </div>
   `
-
-  function add () {
-    emit('add')
-  }
 }
