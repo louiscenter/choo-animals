@@ -1,0 +1,23 @@
+{
+  "name": "choo-animals",
+  "version": "0.0.0",
+  "description": "tutorial app for choo-handbook",
+  "main": "index.js",
+  "scripts": {
+    "dev": "budo index.js:bundle.js -p 3000"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "choo": "^5.1.4",
+    "budo": "^9.4.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louiscenter/choo-animals.git"
+  },
+  "author": "Louis Center (@louiscenter)",
+  "bugs": {
+    "url": "https://github.com/louiscenter/choo-animals/issues"
+  },
+  "homepage": "https://github.com/louiscenter/choo-animals"
+}
