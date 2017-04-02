@@ -3,7 +3,6 @@ var html = require('choo/html')
 var animal = require('./animal')
 var controls = require('./controls')
 var filters = require('./filters')
-var background = require('./background')
 var footer = require('./footer')
 
 module.exports = function (state, emit) {
