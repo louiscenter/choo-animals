@@ -4,15 +4,13 @@
   "description": "tutorial app for choo-handbook",
   "main": "index.js",
   "scripts": {
-    "build": "browserify index.js -o bundle.js -b bundle-collapser/plugin -g unassertify -g yo-yoify -g uglifyify",
-    "start": "npm run build && http-server -p 3000"
+    "start": "budo index.js:bundle.js -p 3000 -- -b bundle-collapser/plugin -g unassertify -g yo-yoify -g uglifyify"
   },
   "license": "MIT",
   "dependencies": {
-    "browserify": "^14.1.0",
+    "budo": "^9.4.7",
     "bundle-collapser": "^1.2.1",
     "choo": "^5.1.4",
-    "http-server": "^0.9.0",
     "uglifyify": "^3.0.4",
     "unassertify": "^2.0.4",
     "yo-yoify": "^3.7.0"
