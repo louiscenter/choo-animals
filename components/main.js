@@ -1,19 +1,26 @@
 var html = require('choo/html')
-
 var animal = require('./animal')
-var controls = require('./controls')
-var footer = require('./footer')
 
 module.exports = function (state, emit) {
   return html`
     <div class="container">
-      <header>choo animals</header>
       <div class="grass">
         <img src="/assets/bg.gif" onclick=${add} />
         ${state.animals.map(showAnimals)}
       </div>
-      ${controls(emit)}
-      ${footer()}
+      <div class="controls">
+        <ul class="filters">
+          <li><a href="/">all</a></li>
+          <li><a href="/filter/crocodile">crododiles</a></li>
+          <li><a href="/filter/koala">koalas</a></li>
+          <li><a href="/filter/lion">lions</a></li>
+          <li><a href="/filter/tiger">tigers</a></li>
+          <li><a href="/filter/walrus">walruses</a></li>
+        </ul>
+      </div>
+      <footer>
+        made by <a href="https://twitter.com/louiscenter">@louiscenter</a> with <a href="https://github.com/yoshuawuyts/choo">choo</a>
+      </footer>
     </div>
   `
 
