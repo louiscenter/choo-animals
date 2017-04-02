@@ -1,16 +1,16 @@
 body {
   background: #FFBFCA;
-  color: #333;
+  color: #333333;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 18px;
 }
 
 a {
-  color: #ff8398;
+  color: #FF8398;
   text-decoration: none;
 }
 
-a:hover { color: #8082fe }
+a:hover { color: #8082FE }
 
 .container {
   width: 100%;
@@ -28,14 +28,14 @@ button {
   font-size: 18px;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   border: none;
-  color: #333;
+  color: #333333;
 }
 
-button:hover { background: violet; }
+button:hover { background: #ED82ED; }
 
 button:active {
-  background: rgb(238, 38, 192);
-  color: #FFF;
+  background: #EE26C0;
+  color: #FFFFFF;
 }
 
 .grass {
@@ -57,12 +57,11 @@ button:active {
   justify-content: center;
 }
 
-footer { font-size: 14px; }
-
 li {
   display: inline;
   list-style-type: none;
   font-size: 14px;
 }
 
+footer { font-size: 14px; }
 
