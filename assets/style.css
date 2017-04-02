@@ -47,7 +47,6 @@ button:active {
 .grass {
   width: 420px;
   height: 420px;
-  background-image: url(/assets/bg.gif);
   margin: 0 0 1.5rem 0;
   position: relative;
 }

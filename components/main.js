@@ -7,8 +7,8 @@ var footer = require('./footer')
 module.exports = function (state, emit) {
   return html`
     <div class="container">
-      <button onclick=${add}>click me</button>
       <div class="grass">
+        <img src="/assets/bg.gif" onclick=${add} />
         ${state.animals.map(showAnimals)}
       </div>
       ${controls(emit)}
@@ -16,8 +16,11 @@ module.exports = function (state, emit) {
     </div>
   `
 
-  function add () {
-    emit('add')
+  function add (e) {
+    var x = e.offsetY - 10
+    var y = e.offsetX - 20
+
+    emit('add', {x: x, y: y})
   }
 
   function showAnimals (obj, i) {
