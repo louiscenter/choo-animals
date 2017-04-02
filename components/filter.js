@@ -9,7 +9,6 @@ module.exports = function (state, emit) {
 
   return html`
     <div class="container" style="background: ${ state.background }">
-      <header>filter: ${ type }</header>
       <div class="grass">
         ${ state.animals.map(showAnimals) }
       </div>
