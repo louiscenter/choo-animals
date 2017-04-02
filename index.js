@@ -2,6 +2,7 @@ var choo = require('choo')
 var html = require('choo/html')
 
 var main = require('./components/main')
+var filter = require('./components/filter')
 
 // initialize choo
 var app = choo()
@@ -13,35 +14,31 @@ app.use(function (state, emitter) {
     { type: 'crocodile', x: 300, y: 50 }
   ]
 
-  state.input = { type: '', x: 0, y: 0 }
+  state.background = '#FFBFCA'
 
   // emitter handlers
-  emitter.on('input', function (data) {
-    var value = data.value
-    var field = data.field
-
-    state.input[field] = value
-  })
-
   emitter.on('add', function () {
-    var animal = state.input
-    var type = animal.type
-    var x = animal.x
-    var y = animal.y
+    var animals = ['crocodile', 'koala', 'lion', 'tiger', 'walrus']
 
-    var obj = { type: type, x: x, y: y }
+    var type = Math.floor(Math.random() * 5)
+    var x = Math.floor(Math.random() * 360)
+    var y = Math.floor(Math.random() * 360)
+
+    var obj = { type: animals[type], x: x, y: y }
     state.animals.push(obj)
 
     emitter.emit('render')
   })
 
-  emitter.on('delete', function () {
-    // do something
+  emitter.on('remove', function (i) {
+    state.animals.splice(i, 1)
+    emitter.emit('render')
   })
 })
 
 // declare routes
 app.route('/', main)
+app.route('/filter/:type', filter)
 
 // start!
 document.body.appendChild(app.start())

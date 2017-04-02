@@ -3,24 +3,21 @@ var html = require('choo/html')
 module.exports = function (emit) {
   return html`
     <div class="controls">
-      <label>animal</label>
-      <input type="text" id="type" onkeyup=${ update } />
+      <button onclick=${ add }>new animal</button>
 
-      <label>x</label>
-      <input type="text" id="x" onkeyup=${ update } />
-
-      <label>y</label>
-      <input type="text" id="y" onkeyup=${ update } />
+      <label>filters</label>
+      <ul class="filters">
+        <li><a href="/">all</a></li>
+        <li><a href="/filter/crocodile">crododiles</a></li>
+        <li><a href="/filter/koala">koalas</a></li>
+        <li><a href="/filter/lion">lions</a></li>
+        <li><a href="/filter/tiger">tigers</a></li>
+        <li><a href="/filter/walrus">walruses</a></li>
+      </ul>
     </div>
   `
 
-  function update (e) {
-    if (e.keyCode === 13) {
-      emit('add')
-    } else {
-      var value = e.target.value
-      var field = e.target.id
-      emit('input', { value: value, field: field })
-    }
+  function add () {
+    emit('add')
   }
 }

@@ -84,21 +84,37 @@ header { margin: 0 0 1rem 0; }
 
 img { position: absolute; }
 
-.controls { margin: 0 0 1rem 0; }
+.controls {
+  margin: 0 0 4rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  padding: 0.35rem 0.5rem 0.1rem 0.6rem;
+  margin: 0 0 1rem 0;
+  display: table;
+  font-size: 18px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background: rgb(255, 232, 234);
+}
+
+button:active {
+  background: rgb(255, 232, 200);
+  color: #333;
+}
 
 label { margin: 0 0.5rem 0 0; }
 
-input {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+footer { font-size: 14px; }
+
+li {
+  display: inline;
+  list-style-type: none;
   font-size: 14px;
 }
 
-input#type {
-  width: 80px;
-  margin: 0 1rem 0 0;
-}
-
-input#x { width: 40px; }
-input#y { width: 40px; }
-
-footer { font-size: 14px; }

@@ -2,24 +2,23 @@ var html = require('choo/html')
 
 var animal = require('./animal')
 var controls = require('./controls')
-var filters = require('./filters')
-var background = require('./background')
 var footer = require('./footer')
 
 module.exports = function (state, emit) {
+  var type = state.params.type
+
   return html`
     <div class="container" style="background: ${ state.background }">
-      <header>choo animals</header>
+      <header>filter: ${ type }</header>
       <div class="grass">
         ${ state.animals.map(showAnimals) }
       </div>
       ${ controls(emit) }
-      ${ filters() }
       ${ footer() }
     </div>
   `
 
   function showAnimals (obj, i) {
-    return animal(emit, obj, i)
+    if (type === obj.type) { return animal(emit, obj, i) }
   }
 }
