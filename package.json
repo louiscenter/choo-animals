@@ -4,7 +4,7 @@
   "description": "tutorial app for choo-handbook",
   "main": "index.js",
   "scripts": {
-    "dev": "budo index.js:bundle.js -p 3000"
+    "start": "budo index.js:bundle.js -p 3000"
   },
   "license": "MIT",
   "dependencies": {
