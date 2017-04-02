@@ -23,19 +23,25 @@ a:hover { color: #8082FE }
 
 button {
   background: none;
-  padding: 0.4rem 0.5rem 0.1rem 0.5rem;
+  padding: 0.4rem 0rem 0.1rem 0rem;
   margin: 0 0 1rem 0;
   font-size: 18px;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   border: none;
   color: #333333;
+  border-bottom: 2px solid #333;
 }
 
-button:hover { background: #ED82ED; }
+button:hover {
+  background: #ED82ED;
+  padding: 0.4rem 0.5rem 0.1rem 0.5rem;
+  border-bottom: 2px solid #ED83ED;
+}
 
 button:active {
   background: #EE26C0;
   color: #FFFFFF;
+  border-bottom: 2px solid #EE26C0;
 }
 
 .grass {
