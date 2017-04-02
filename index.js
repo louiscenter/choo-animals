@@ -1,7 +1,6 @@
 var choo = require('choo')
 
 var main = require('./components/main')
-var filter = require('./components/filter')
 
 // initialize choo
 var app = choo()
