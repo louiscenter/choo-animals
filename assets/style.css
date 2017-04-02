@@ -44,6 +44,8 @@ button:active {
   border-bottom: 2px solid #EE26C0;
 }
 
+header { margin: 0 0 1.5rem 0; }
+
 .grass {
   width: 420px;
   height: 420px;
@@ -65,8 +67,6 @@ button:active {
 li {
   display: inline;
   list-style-type: none;
-  font-size: 14px;
 }
 
-footer { font-size: 14px; }
 

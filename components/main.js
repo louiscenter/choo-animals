@@ -7,6 +7,7 @@ var footer = require('./footer')
 module.exports = function (state, emit) {
   return html`
     <div class="container">
+      <header>choo animals</header>
       <div class="grass">
         <img src="/assets/bg.gif" onclick=${add} />
         ${state.animals.map(showAnimals)}
