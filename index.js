@@ -16,9 +16,9 @@ app.use(function (state, emitter) {
   emitter.on('add', function () {
     var animals = ['crocodile', 'koala', 'lion', 'tiger', 'walrus']
 
-    var type = Math.floor(Math.random() * 5)
-    var x = Math.floor(Math.random() * 360)
-    var y = Math.floor(Math.random() * 360)
+    var type = random(4)
+    var x = random(360)
+    var y = random(360)
 
     var obj = { type: animals[type], x: x, y: y }
     state.animals.push(obj)
@@ -38,3 +38,7 @@ app.route('/filter/:type', main)
 
 // start!
 document.body.appendChild(app.start())
+
+function random (max) {
+  return Math.floor(Math.random() * (max + 1))
+}
