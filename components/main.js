@@ -2,6 +2,7 @@ var html = require('choo/html')
 var animal = require('./animal')
 
 module.exports = function (state, emit) {
+  // create html template
   return html`
     <div class="container">
       <div class="grass">
@@ -24,6 +25,7 @@ module.exports = function (state, emit) {
     </div>
   `
 
+  // add new animal to state
   function add (e) {
     var x = e.offsetY - 10
     var y = e.offsetX - 20
@@ -31,6 +33,7 @@ module.exports = function (state, emit) {
     emit('add', {x: x, y: y})
   }
 
+  // render animal components
   function showAnimals (obj, i) {
     var type = state.params.type
     if (type) {

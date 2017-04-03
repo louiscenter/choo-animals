@@ -1,5 +1,7 @@
+// import choo
 var choo = require('choo')
 
+// import component
 var main = require('./components/main')
 
 // initialize choo
@@ -12,7 +14,7 @@ app.use(function (state, emitter) {
     { type: 'crocodile', x: 300, y: 50 }
   ]
 
-  // emitter handlers
+  // add animal
   emitter.on('add', function (data) {
     var animals = ['crocodile', 'koala', 'lion', 'tiger', 'walrus']
 
@@ -26,6 +28,7 @@ app.use(function (state, emitter) {
     emitter.emit('render')
   })
 
+  // remove animal
   emitter.on('remove', function (i) {
     state.animals.splice(i, 1)
     emitter.emit('render')
@@ -36,6 +39,6 @@ app.use(function (state, emitter) {
 app.route('/', main)
 app.route('/filter/:type', main)
 
-// start!
+// start app
 document.body.appendChild(app.start())
 
