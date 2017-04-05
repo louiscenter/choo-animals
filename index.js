@@ -40,5 +40,5 @@ app.route('/', main)
 app.route('/filter/:type', main)
 
 // start app
-document.body.appendChild(app.start())
+app.mount('div')
 
