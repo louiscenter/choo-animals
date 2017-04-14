@@ -27,8 +27,8 @@ module.exports = function (state, emit) {
 
   // add new animal to state
   function add (e) {
-    var x = e.offsetY - 10
-    var y = e.offsetX - 20
+    var x = e.offsetX - 20
+    var y = e.offsetY - 10
 
     emit('add', {x: x, y: y})
   }
