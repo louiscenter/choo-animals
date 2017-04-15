@@ -7,7 +7,7 @@ module.exports = function (emit, animal, i) {
 
   // create html template
   return html`
-    <img src="/assets/${type}.gif" style="top: ${x}px; left: ${y}px;" data-id=${i} onclick=${remove}>
+    <img src="/assets/${type}.gif" style="left: ${x}px; top: ${y}px;" data-id=${i} onclick=${remove}>
   `
 
   // remove animal from state
