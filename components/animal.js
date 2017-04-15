@@ -7,12 +7,12 @@ module.exports = function (emit, animal, i) {
 
   // create html template
   return html`
-    <img src="/assets/${type}.gif" style="left: ${x}px; top: ${y}px;" data-id=${i} onclick=${remove}>
+    <img src="/assets/${type}.gif" style="left: ${x}px; top: ${y}px;" id=${i} onclick=${remove}>
   `
 
   // remove animal from state
   function remove (e) {
-    var index = e.target.dataset.id
+    var index = e.target.id
     emit('remove', index)
   }
 }
