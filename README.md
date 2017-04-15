@@ -1,3 +1,3 @@
 # choo-animals
 
-A tutorial app for [`choo-handbook`](https://github.com/yoshuawuyts/choo-handbook)
+This app was built for the [`choo-handbook`](https://github.com/yoshuawuyts/choo-handbook).
