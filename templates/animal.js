@@ -1,5 +1,7 @@
+// import html helper
 var html = require('choo/html')
 
+// export function
 module.exports = function (emit, animal, i) {
   var type = animal.type
   var x = animal.x
@@ -13,6 +15,6 @@ module.exports = function (emit, animal, i) {
   // remove animal from state
   function remove (e) {
     var index = e.target.id
-    emit('remove', index)
+    emit('removeAnimal', index)
   }
 }

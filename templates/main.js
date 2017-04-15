@@ -1,13 +1,17 @@
+// import html helper
 var html = require('choo/html')
+
+// import template
 var animal = require('./animal')
 
+// export function
 module.exports = function (state, emit) {
   // create html template
   return html`
     <div class="container">
       <div class="grass">
         <img src="/assets/bg.gif" onclick=${add} />
-        ${state.animals.map(showAnimals)}
+        ${state.animals.map(animalMap)}
       </div>
       <div class="controls">
         <ul class="filters">
@@ -30,12 +34,13 @@ module.exports = function (state, emit) {
     var x = e.offsetX - 20
     var y = e.offsetY - 10
 
-    emit('add', {x: x, y: y})
+    emit('addAnimal', {x: x, y: y})
   }
 
-  // render animal components
-  function showAnimals (obj, i) {
+  // map function
+  function animalMap (obj, i) {
     var type = state.params.type
+
     if (type) {
       if (type === obj.type) {
         return animal(emit, obj, i)
