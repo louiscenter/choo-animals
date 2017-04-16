@@ -29,6 +29,17 @@ module.exports = function (state, emit) {
     </div>
   `
 
+  // map function
+  function animalMap (obj, i) {
+    var type = state.params.type
+
+    if (type && type !== obj.type) {
+      return // nothing
+    } else {
+      return animal(remove, obj, i)
+    }
+  }
+
   // add new animal to state
   function add (e) {
     var x = e.offsetX - 20
@@ -41,18 +52,5 @@ module.exports = function (state, emit) {
   function remove (e) {
     var index = e.target.id
     emit('removeAnimal', index)
-  }
-
-  // map function
-  function animalMap (obj, i) {
-    var type = state.params.type
-
-    if (type) {
-      if (type === obj.type) {
-        return animal(remove, obj, i)
-      }
-    } else {
-      return animal(remove, obj, i)
-    }
   }
 }
